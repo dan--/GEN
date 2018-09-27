@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using GirlsEmpowermentNetwork.Models;
+using GirlsEmpowermentNetwork.Repositories;
 
 namespace GirlsEmpowermentNetwork.Services
 {
@@ -16,11 +17,14 @@ namespace GirlsEmpowermentNetwork.Services
     {
         private readonly ITemplateService _templateService;
         private readonly IVolunteerService _volunteerService;
+        private readonly TwilioRepository _twilioRepository;
 
-        public MessageSenderService(ITemplateService templateService, IVolunteerService volunteerService)
+        public MessageSenderService(ITemplateService templateService, IVolunteerService volunteerService, 
+            TwilioRepository twilioRepository)
         {
             _templateService = templateService;
             _volunteerService = volunteerService;
+            _twilioRepository = twilioRepository;
         }
 
         public void Send(string templateName, IEnumerable<Volunteer> recipients)
@@ -36,7 +40,7 @@ namespace GirlsEmpowermentNetwork.Services
 
         private void SendMessage(Volunteer recipient, string messageBody)
         {
-            throw new NotImplementedException();
+            _twilioRepository.Send(messageBody, recipient.MobileNumber);
         }
 
         private string CompileTemplate(Template template, Volunteer recipient)

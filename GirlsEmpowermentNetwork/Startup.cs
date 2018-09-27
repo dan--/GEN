@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 ﻿using System;
 using GirlsEmpowermentNetwork.Repositories;
 using GirlsEmpowermentNetwork.Services;

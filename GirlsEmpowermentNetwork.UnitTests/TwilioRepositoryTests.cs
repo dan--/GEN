@@ -17,14 +17,15 @@ namespace GirlsEmpowermentNetwork.IntegrationTests
         }
 
         [Fact]
-        public async Task SendAsync_ShouldCorrectlyText()
+        public void SendAsync_ShouldCorrectlySendAText()
         {
             //arrange
-            var response = await twilioRepository.SendAsync("this is a test text", "+12142408305");
+            var response = twilioRepository.Send("this is a test text", "+1214240-8305");
 
             //assert
             response.ShouldNotBeNull();
-            response.ShouldBe(MessageResource.StatusEnum.Delivered);
+            response.ShouldNotBe(MessageResource.StatusEnum.Failed);
+            response.ShouldNotBe(MessageResource.StatusEnum.Undelivered);
         }
     }
 }

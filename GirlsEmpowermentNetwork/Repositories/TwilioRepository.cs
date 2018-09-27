@@ -16,9 +16,9 @@ namespace GirlsEmpowermentNetwork.Repositories
             TwilioClient.Init(accountSid, authToken);
         }
 
-        public async Task<MessageResource.StatusEnum> SendAsync(string MessageBody, string ToPhoneNumber, string FromPhoneNumber= "+15125184414")
+        public MessageResource.StatusEnum Send(string MessageBody, string ToPhoneNumber, string FromPhoneNumber= "+15125184414")
         {
-            var message = await MessageResource.CreateAsync(
+            var message = MessageResource.Create(
                 body: MessageBody,
                 from: new PhoneNumber(FromPhoneNumber),
                 to: new PhoneNumber(ToPhoneNumber));
