@@ -17,25 +17,26 @@ namespace GirlsEmpowermentNetwork.Repositories
                 new Event
                 {
                     Id = "event-1",
-                    Name = "We Are Girls Austin VLC Meeting"
+                    Name = "We Are Girls Austin VLC Meeting",
+                    Time= "10am – 11am",
+                    Details= "The We Are Girls Austin 2018 Volunteer Leadership Committee convenes for final preparation before leading volunteer force on November 3rd",
                 },
                 new Event
                 {
-                    Id = "event-2",
-                    Name = "We Are Girls Austin Volunteer Training"
-                },
-                new Event
-                {
-                    Id = "event-3",
-                    Name = "GALeria Shopping Event"
-                },
-                new Event
-                {
-                    Id = "event-4",
-                    Name = "Volunteer Night: We Are Girls Austin Phone Bank"
-                },
-            };
+                    Id = "event-1",
+                    Name = "We Are Girls Austin Volunteer Training",
+                    Time= " 10am – 11am",
+                    Details= "We Are Girls Austin 2018 volunteers join for a training on the layout of the school, their roles, and other key event information.",
 
+                },
+                new Event
+                {
+                    Id = "event-1",
+                    Name = "GALeria Shopping Event",
+                    Time= " 1pm - 4pm",
+                    Details= "Girl Advocacy League hosts a craft market featuring local women makers"
+                }
+            };
         }
     }
 }
