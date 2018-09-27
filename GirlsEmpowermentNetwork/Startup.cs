@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-﻿using System;
+using System;
 using GirlsEmpowermentNetwork.Repositories;
 using GirlsEmpowermentNetwork.Services;
 using Microsoft.AspNetCore.Builder;
@@ -30,6 +29,7 @@ namespace GirlsEmpowermentNetwork
             {
                 config.For<IVolunteerService>().Use<VolunteersService>();
                 config.For<ITemplateService>().Use<TemplateService>();
+                config.For<ITemplateRepository>().Use<TemplateRepository>();
                 config.For<TwilioRepository>().Use<TwilioRepository>();
 
                 config.Populate(services);
