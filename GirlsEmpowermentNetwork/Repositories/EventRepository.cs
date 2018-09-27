@@ -23,7 +23,7 @@ namespace GirlsEmpowermentNetwork.Repositories
                 },
                 new Event
                 {
-                    Id = "event-1",
+                    Id = "event-2",
                     Name = "We Are Girls Austin Volunteer Training",
                     Time= " 10am – 11am",
                     Details= "We Are Girls Austin 2018 volunteers join for a training on the layout of the school, their roles, and other key event information.",
@@ -31,7 +31,7 @@ namespace GirlsEmpowermentNetwork.Repositories
                 },
                 new Event
                 {
-                    Id = "event-1",
+                    Id = "event-3",
                     Name = "GALeria Shopping Event",
                     Time= " 1pm - 4pm",
                     Details= "Girl Advocacy League hosts a craft market featuring local women makers"
