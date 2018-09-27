@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using GirlsEmpowermentNetwork.Models;
 using GirlsEmpowermentNetwork.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GirlsEmpowermentNetwork.Controllers.api
@@ -20,7 +16,7 @@ namespace GirlsEmpowermentNetwork.Controllers.api
             _volunteerService = volunteerService;
         }
 
-        public List<Volunteer> Get()
+        public IEnumerable<Volunteer> Get()
         {
             var list = _volunteerService.GetAll();
 

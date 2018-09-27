@@ -1,6 +1,9 @@
-﻿using GirlsEmpowermentNetwork.Models;
+﻿using System.Collections.Generic;
+using System.Linq;
+using GirlsEmpowermentNetwork.Models;
 using GirlsEmpowermentNetwork.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GirlsEmpowermentNetwork.Controllers
 {
@@ -22,7 +25,7 @@ namespace GirlsEmpowermentNetwork.Controllers
                 TemplateNames = templateNames
             };
 
-            return View();
+            return View(model);
         }
     }
 }

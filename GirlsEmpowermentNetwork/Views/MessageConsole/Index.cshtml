@@ -1,8 +1,51 @@
-﻿@model object
+﻿@model MessageConsoleViewModel
 
 @{
-  ViewBag.Title = "title";
-  ViewBag.Title = "title";
+  ViewBag.Title = "Message Console";
 }
 
-<h2>title</h2>
+<h2>Message Console</h2>
+
+<div>
+  <ul class="nav nav-pills">
+    @foreach (var templateName in Model.TemplateNames)
+    {
+      <li role="presentation" class="active"><a href="#">@templateName</a></li>
+    }
+    <li role="presentation" class=""><a href="#">Create New Message</a></li>
+  </ul>
+</div>
+
+@*
+  <select class="form-control">
+
+    @{
+      <option value="">-- Select Template --</option>
+      foreach (var templateName in Model.TemplateNames)
+      {
+        <option value="@templateName">@templateName</option>
+      }
+    }
+  </select>
+*@
+
+
+<form>
+  <textarea class="form-control"></textarea>
+  <button type="button" class="btn btn-default">Send to All</button>
+</form>
+@section Scripts
+  {
+  <script>
+
+    $(document).ready(function () {
+
+    });
+
+    function getTemplate(name) {
+
+    }
+
+
+  </script>
+}
