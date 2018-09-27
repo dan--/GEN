@@ -7,5 +7,6 @@ namespace GirlsEmpowermentNetwork.Models
         public string EventId { get; set; }
         public string EventName { get; set; }
         public IEnumerable<string> TemplateNames { get; set; }
+        public string MessageBody { get; set; }
     }
 }

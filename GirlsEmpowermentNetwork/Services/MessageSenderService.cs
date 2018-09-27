@@ -11,6 +11,7 @@ namespace GirlsEmpowermentNetwork.Services
     public interface IMessageSenderService
     {
         void Send(string templateName, IEnumerable<Volunteer> recipients);
+        void SendNewMessage(string messageBody, IEnumerable<Volunteer> recipients);
     }
 
     public class MessageSenderService: IMessageSenderService
@@ -34,6 +35,17 @@ namespace GirlsEmpowermentNetwork.Services
             foreach (var recipient in recipients)
             {
                 var messageBody = CompileTemplate(template, recipient);
+                SendMessage(recipient, messageBody);
+            }
+        }
+
+        public void SendNewMessage(string messageBody, IEnumerable<Volunteer> recipients)
+        {
+            var temporaryTemplate = new Template();
+            temporaryTemplate.Body = messageBody;
+            foreach (var recipient in recipients)
+            {
+                messageBody = CompileTemplate(temporaryTemplate, recipient);
                 SendMessage(recipient, messageBody);
             }
         }

@@ -10,11 +10,16 @@ namespace GirlsEmpowermentNetwork.Controllers
     public class MessageConsoleController : Controller
     {
         private readonly ITemplateService _templateService;
+        private readonly IMessageSenderService _messageSenderService;
+        private readonly IVolunteerService _volunteerService;
         private readonly IEventService _eventService;
 
-        public MessageConsoleController(ITemplateService templateService, IEventService eventService)
+        public MessageConsoleController(ITemplateService templateService, IMessageSenderService messageSenderService,
+            IVolunteerService volunteerService, IEventService eventService)
         {
             _templateService = templateService;
+            _messageSenderService = messageSenderService;
+            _volunteerService = volunteerService;
             _eventService = eventService;
         }
 
@@ -35,8 +40,13 @@ namespace GirlsEmpowermentNetwork.Controllers
             return View(model);
         }
 
-        public IActionResult SendAll()
+        [Route("[controller]/[action]/{eventId}")]
+        public IActionResult SendAll(MessageConsoleViewModel messageConsoleViewModel)
         {
+            var eventId = messageConsoleViewModel.EventId;
+            var messageBody = messageConsoleViewModel.MessageBody;
+            var volunteers = _volunteerService.GetVolunteersForEvent(eventId);
+            _messageSenderService.SendNewMessage(messageBody, volunteers);
             return View();
         }
     }

@@ -31,8 +31,10 @@
 *@
 
 
-@using (Html.BeginForm("SendAll", "MessageConsole", FormMethod.Post)) { 
-  <textarea class="form-control"></textarea>
+@using (Html.BeginForm("SendAll", "MessageConsole", FormMethod.Post))
+        {
+            @Html.TextAreaFor(m => m.MessageBody, new { @class = "form-control" })
+  <hidden name="EventId" value="@Model.EventId"></hidden>
   <button type="submit" class="btn btn-default">Send to All</button>
 }
   
