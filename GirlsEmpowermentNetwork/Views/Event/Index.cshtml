@@ -3,7 +3,9 @@
 <ul>
   @foreach (var item in Model)
   {
-    <li>@item.Name</li>
+    <li>
+      @Html.ActionLink(item.Name, "Index", "MessageConsole", new {eventId=item.Id})
+    </li>
   }
 </ul>
 
