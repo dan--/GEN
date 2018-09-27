@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+*
+
+ {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: roberto;
+    font-size: 16px;
+    color: black;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #FFFFFF;
+    color: #a18bc1;
+    padding: 12px 20px;
+    border-color: #a18bc1 ;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    width: 420px;
+    margin-top: 20px;
+    
+}
+
+.button{
+	background-color: #a18bc1;
+    border: none;
+    border-radius: 12px;
+    color: #FFFFFF;
+    height: 25px;
+    margin-top: 20px;
+    
+    
+}
+
+
+input[type=submit]:hover {
+    background-color: #a18bc1;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+<!-- HEADER -->
+<header id="header" class="header2 ">
+	<!-- Main Header -->
+	<div id="main-header" class="bg-white color-dark ">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-3 col-md-3 col-sm-12">
+					<div class="logo">
+		<a class="default-logo" href="https://www.girlsempowermentnetwork.org/" title="Girls Empowerment Network"> 
+		<img src="https://www.girlsempowermentnetwork.org/wp-content/uploads/2018/02/GEN-logo-2018.png" alt="Girls Empowerment Network" width="350" height="150"/>	</a>
+						</div>
+				</div>
+
+				<div class="col-lg-9 col-md-9 col-sm-12">	
+					<div class="navigation">
+						<nav id="main-nav" class="color-white active-color-white dropdown-light border-color-turquoise">
+
+							<div id="mobile-menu-button">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<div class="menu">
+								<ul id="primary-nav" class="primary-nav"><li id="menu-item-10258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-10258"><a href="https://www.girlsempowermentnetwork.org/" class=" ">Events</a></li>
+<li id="menu-item-12918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12918"><a href="https://www.girlsempowermentnetwork.org/bettyenowlin/" class=" ">Announcements</a></li>
+</ul>
+</nav>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+</style>
+</head>
+<body>
+
+<h2>Pathfinder October Workshop 2018</h2>
+<p>October 13,2018 10:00AM</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Volunteer Message')">Volunteer Message</button>
+  <button class="tablinks" onclick="openCity(event, 'Program Message')">Program Message</button>
+  <button class="tablinks" onclick="openCity(event, 'Event Message')">Event Message</button>
+  <button class="tablinks" onclick="openCity(event, 'Create New Message')">Create New Message</button>
+</div>
+
+<div id="Volunteer Message" class="tabcontent">
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">To:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="235 paticipants">
+      </div>
+    </div>
+  
+ 
+   
+
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Message:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Hi [+First Name]! Can't wait to see you tomorrow at 8:00am for [+event name] Austin. Just come check in with me at Volunteer Registration, and then I can send you to the workship space to get started." style="height:200px"></textarea>
+      </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="fname">Tags:</label>
+      </div>
+    
+    <!-- Tags  -->
+      <div>
+        <button class="button" onclick="alert('Hello world!')">+ First Name</button>
+ <button class="button" onclick="alert('Hello world!')">+ Last Name</button>
+  <button class="button" onclick="alert('Hello world!')">+ Role</button>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="SEND MESSAGE">
+    </div>
+  </form>
+</div>
+
+</div>
+
+<div id="Program Message" class="tabcontent">
+  
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">To:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="235 paticipants">
+      </div>
+    </div>
+  
+ 
+   
+
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Message:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Hi [+First Name]! Can't wait to see you tomorrow at 8:00am for [+event name] Austin. Just come check in with me at Volunteer Registration, and then I can send you to the workship space to get started." style="height:200px"></textarea>
+      </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="fname">Tags:</label>
+      </div>
+      
+      <div>
+        <button class="button" onclick="alert('Hello world!')">+ First Name</button>
+ <button class="button" onclick="alert('Hello world!')">+ Last Name</button>
+  <button class="button" onclick="alert('Hello world!')">+ Role</button>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="SEND MESSAGE">
+    </div>
+  </form>
+</div>
+
+
+</div>
+
+<div id="Event Message" class="tabcontent">
+  
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">To:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="235 paticipants">
+      </div>
+    </div>
+  
+ 
+   
+
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Message:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Hi [+First Name]! Can't wait to see you tomorrow at 8:00am for [+event name] Austin. Just come check in with me at Volunteer Registration, and then I can send you to the workship space to get started." style="height:200px"></textarea>
+      </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="fname">Tags:</label>
+      </div>
+      
+      <div>
+        <button class="button" onclick="alert('Hello world!')">+ First Name</button>
+ <button class="button" onclick="alert('Hello world!')">+ Last Name</button>
+  <button class="button" onclick="alert('Hello world!')">+ Role</button>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="SEND MESSAGE">
+    </div>
+  </form>
+</div>
+
+
+
+<div id="Create New Message" class="tabcontent">
+  
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">To:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="235 paticipants">
+      </div>
+    </div>
+  
+ 
+   
+
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Message:</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Hi [+First Name]! Can't wait to see you tomorrow at 8:00am for [+event name] Austin. Just come check in with me at Volunteer Registration, and then I can send you to the workship space to get started." style="height:200px"></textarea>
+      </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="fname">Tags:</label>
+      </div>
+      
+      <div>
+        <button class="button" onclick="alert('Hello world!')">+ First Name</button>
+ <button class="button" onclick="alert('Hello world!')">+ Last Name</button>
+  <button class="button" onclick="alert('Hello world!')">+ Role</button>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="SEND MESSAGE">
+    </div>
+  </form>
+</div>
+
+
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<li id="menu-item-10994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10994"><a href="https://www.girlsempowermentnetwork.org/whats-new/blog/" class=" ">Event Message</a>
+<li id="menu-item-10994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10994"><a href="https://www.girlsempowermentnetwork.org/whats-new/blog/" class=" ">Reminder Message</a>
+<li id="menu-item-10994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10994"><a href="https://www.girlsempowermentnetwork.org/whats-new/blog/" class=" ">Update Message</a>
+<li id="menu-item-10994" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-10994"><a href="https://www.girlsempowermentnetwork.org/whats-new/blog/" class=" ">Create New Message</a> -->
+<!-- <ul class="mn-sub">
+	<li id="menu-item-10804" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10804"><a href="https://www.girlsempowermentnetwork.org/whats-new/blog/" class=" ">Blog</a></li>
+	<li id="menu-item-10812" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10812"><a href="https://www.girlsempowermentnetwork.org/whats-new/press-releases/" class=" ">Press Releases</a></li>
+	<li id="menu-item-10936" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10936"><a target="_blank" href="http://visitor.r20.constantcontact.com/d.jsp?llr=bowoa4uab&#038;p=oi&#038;m=1122027133377&#038;sit=mxyl6q6jb&#038;f=d4a1d15a-612a-4b9d-9d45-77f8ee3b80d8" class=" ">Newsletter Signup</a></li> -->
+
+</li>
+						
+						
+						
+
+						
+
+						
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- /Main Header -->
+</header>
+<!-- /HEADER -->	
+<!--
+<div id="main-header" class="bg-white color-dark ">
+		<div class="container">
+		<div class="row">
+
+	<div class="col-lg-3 col-md-3 col-sm-12">
+	<div class="logo">
+				
+	<a class="default-logo" href="https://www.girlsempowermentnetwork.org/" title="Girls Empowerment Network">
+
+<img src="https://www.girlsempowermentnetwork.org/wp-content/uploads/2018/02/GEN-logo-2018.png" alt="Girls Empowerment Network" />	</a>
+						</div>
+				</div>>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				</html>
