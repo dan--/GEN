@@ -13,20 +13,12 @@ namespace GirlsEmpowermentNetwork.Services
     {
         public List<Volunteer> GetAll()
         {
-            return new List<Volunteer>
-            {
-                new Volunteer{FirstName = "Dan", MobileNumber = "8189256585"},
-                new Volunteer{FirstName = "Dre", MobileNumber = "2142408305"}
-            };
+            return new List<Volunteer> {};
         }
 
         public List<Volunteer> GetVolunteersForEvent(string eventId)
         {
-            return new List<Volunteer>
-            {
-                new Volunteer{FirstName = "Dan", MobileNumber = "8189256585"},
-                new Volunteer{FirstName = "Dre", MobileNumber = "2142408305"}
-            };
+            return new List<Volunteer> { };
         }
     }
 }
