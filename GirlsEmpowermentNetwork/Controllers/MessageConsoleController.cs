@@ -43,11 +43,14 @@ namespace GirlsEmpowermentNetwork.Controllers
         [Route("[controller]/[action]/{eventId}")]
         public IActionResult SendAll(MessageConsoleViewModel messageConsoleViewModel)
         {
-            var eventId = messageConsoleViewModel.EventId;
-            var messageBody = messageConsoleViewModel.MessageBody;
-            var volunteers = _volunteerService.GetVolunteersForEvent(eventId);
-            _messageSenderService.SendNewMessage(messageBody, volunteers);
-            return View();
+            if (ModelState.IsValid)
+            {
+                var eventId = messageConsoleViewModel.EventId;
+                var messageBody = messageConsoleViewModel.MessageBody;
+                var volunteers = _volunteerService.GetVolunteersForEvent(eventId);
+                _messageSenderService.SendNewMessage(messageBody, volunteers);
+            }
+            return Redirect($"~/messageconsole/{messageConsoleViewModel.EventId}");
         }
     }
 }

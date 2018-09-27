@@ -57,7 +57,11 @@ namespace GirlsEmpowermentNetwork.Services
 
         private string CompileTemplate(Template template, Volunteer recipient)
         {
-            var result = template.Body.Replace("@firstname@", recipient.FirstName);
+            var result = template.Body;
+            if (template.Body.Contains("@firstname@"))
+            {
+                result = template.Body.Replace("@firstname@", recipient.FirstName);
+            }
 
             return result;
         }
