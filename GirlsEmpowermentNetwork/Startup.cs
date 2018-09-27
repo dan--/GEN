@@ -1,7 +1,9 @@
+<<<<<<< Updated upstream
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GirlsEmpowermentNetwork.Repositories;
 using GirlsEmpowermentNetwork.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,6 +35,7 @@ namespace GirlsEmpowermentNetwork
             container.Configure(config =>
             {
                 config.For<IVolunteerService>().Use<VolunteersService>();
+                config.For<TwilioRepository>().Use<TwilioRepository>();
 
                 config.Populate(services);
             });

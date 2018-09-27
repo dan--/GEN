@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GirlsEmpowermentNetwork", "GirlsEmpowermentNetwork\GirlsEmpowermentNetwork.csproj", "{8320EFAD-3372-4F4C-82B4-9A3DAF797FEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GirlsEmpowermentNetwork", "GirlsEmpowermentNetwork\GirlsEmpowermentNetwork.csproj", "{8320EFAD-3372-4F4C-82B4-9A3DAF797FEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2E5ECDA3-BDB8-4809-8D24-FC488D257DAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GirlsEmpowermentNetwork.IntegrationTests", "GirlsEmpowermentNetwork.UnitTests\GirlsEmpowermentNetwork.IntegrationTests.csproj", "{B7AF2F0F-B5CC-439E-9FBD-B73A22972A6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{8320EFAD-3372-4F4C-82B4-9A3DAF797FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8320EFAD-3372-4F4C-82B4-9A3DAF797FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8320EFAD-3372-4F4C-82B4-9A3DAF797FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7AF2F0F-B5CC-439E-9FBD-B73A22972A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7AF2F0F-B5CC-439E-9FBD-B73A22972A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7AF2F0F-B5CC-439E-9FBD-B73A22972A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7AF2F0F-B5CC-439E-9FBD-B73A22972A6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7AF2F0F-B5CC-439E-9FBD-B73A22972A6C} = {2E5ECDA3-BDB8-4809-8D24-FC488D257DAD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5F3C6207-796B-4DD8-9925-47FE575CABC7}
