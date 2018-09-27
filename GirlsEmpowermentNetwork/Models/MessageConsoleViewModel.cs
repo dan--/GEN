@@ -8,7 +8,7 @@ namespace GirlsEmpowermentNetwork.Models
         public string EventId { get; set; }
         public string EventName { get; set; }
         public IEnumerable<string> TemplateNames { get; set; }
-        [Required]
+        [Required(ErrorMessage = "The MessageBody is required.")]
         public string MessageBody { get; set; }
     }
 }
