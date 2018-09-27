@@ -1,4 +1,7 @@
-﻿using GirlsEmpowermentNetwork.Models;
+﻿using System;
+using System.Linq;
+using GirlsEmpowermentNetwork.Models;
+using GirlsEmpowermentNetwork.Repositories;
 
 namespace GirlsEmpowermentNetwork.Services
 {
@@ -9,15 +12,18 @@ namespace GirlsEmpowermentNetwork.Services
 
     public class TemplateService : ITemplateService
     {
+        private readonly ITemplateRepository _templateRepository;
+
+        public TemplateService(ITemplateRepository templateRepository)
+        {
+            _templateRepository = templateRepository;
+        }
+
         public Template GetTemplateByName(string name)
         {
-            return new Template
-            {
-                Name = "sample 1",
-                Body = @"
-Hey @fistname@, are you going to attend tomorrow's event?
-"
-            };
+            var template = _templateRepository.Templates().SingleOrDefault(t => string.Equals(t.Name, name, StringComparison.CurrentCultureIgnoreCase));
+
+            return template;
         }
     }
 }

@@ -29,6 +29,7 @@ namespace GirlsEmpowermentNetwork
             {
                 config.For<IVolunteerService>().Use<VolunteersService>();
                 config.For<ITemplateService>().Use<TemplateService>();
+                config.For<ITemplateRepository>().Use<TemplateRepository>();
                 config.For<TwilioRepository>().Use<TwilioRepository>();
 
                 config.Populate(services);
