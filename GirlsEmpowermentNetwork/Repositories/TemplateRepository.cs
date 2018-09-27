@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using GirlsEmpowermentNetwork.Models;
 
 namespace GirlsEmpowermentNetwork.Repositories
@@ -19,15 +16,18 @@ namespace GirlsEmpowermentNetwork.Repositories
             {
                 new Template
                 {
-                    Name = "sample 1",
-                    Body = @"
-Hey @fistname@, are you going to attend tomorrow's event?
-"
+                    Name = "Sample volunteer event text",
+                    Body = "Hi @firstname@! Can’t wait to see you tomorrow at 8am for We Are Girls Austin. Just come check in with me at Volunteer Registration, and then I can send you to the workshop space to get started."
+},
+                new Template
+                {
+                    Name = "Sample program text",
+                    Body = "Hi @firstname@! So excited to see you at the workshop this Saturday! Just a reminder that we’re doing Power Chats, so professional dress is important."
                 },
                 new Template
                 {
-                    Name = "sample 2",
-                    Body = "message body 2"
+                    Name = "Sample event text",
+                    Body = "Hi @firstname@! Hope you had a good day. Can’t wait to see you tonight at the GEN Town Hall! We’ll have drinks and snacks galore."
                 }
             };
         }
