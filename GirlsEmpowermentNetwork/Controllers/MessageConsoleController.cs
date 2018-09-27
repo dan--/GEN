@@ -16,7 +16,8 @@ namespace GirlsEmpowermentNetwork.Controllers
             _templateService = templateService;
         }
 
-        public IActionResult Index()
+        [Route("{controller}/{eventId}")]
+        public IActionResult Index(string eventId)
         {
             var templateNames = _templateService.GetAllTemplateNames();
 
@@ -26,6 +27,11 @@ namespace GirlsEmpowermentNetwork.Controllers
             };
 
             return View(model);
+        }
+
+        public IActionResult SendAll()
+        {
+            return View();
         }
     }
 }

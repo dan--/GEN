@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GirlsEmpowermentNetwork.Models
 {
     public class MessageConsoleViewModel
     {
+        public string EventId { get; set; }
         public IEnumerable<string> TemplateNames { get; set; }
     }
 }
